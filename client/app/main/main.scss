@@ -1,0 +1,65 @@
+.thing-form {
+  margin: 20px 0;
+}
+
+#banner {
+  border-bottom: none;
+  margin-top: -20px;
+}
+
+#banner h1 {
+  font-size: 60px;
+  line-height: 1;
+  letter-spacing: -1px;
+}
+
+.hero-unit {
+  position: relative;
+  padding: 30px 15px;
+  color: #F5F5F5;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  background: #4393B9;
+}
+
+.navbar-text {
+  margin-left: 15px;
+}
+
+.container {
+  width: 100%;
+
+  .carousel {
+    text-align: center;
+
+    .content {
+      text-align: left;
+      width: 280px;
+      margin: 90px -140px 0;
+      position: absolute;
+      display: inline-block;
+      @media (max-width: 900px) {
+        width: 245px;
+        margin: 80px -115px 0;
+      }
+
+      p {
+        font-size: 34px;
+        line-height: 1.25em;
+        font-weight: bold;
+        @media (max-width: 900px) {
+          font-size: 28px;
+        }
+      }
+    }
+
+    .layer {
+      .image {
+        box-shadow: 6px 6px 10px #000;
+        @media (max-width: 900px) {
+          width: 350px;
+        }
+      }
+    }
+  }
+}

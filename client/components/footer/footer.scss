@@ -1,0 +1,33 @@
+footer.footer {
+  text-align: right;
+  padding: 30px 30px 10px;
+  margin-top: 25px;
+  @media (max-width: 900px) {
+  	margin-top: 0;
+  	padding: 0 30px 10px;
+  	text-align: center;
+  }
+
+  a {
+  	text-decoration: none;
+  	-webkit-transition: opacity 0.2s ease-out;
+  	transition: opacity 0.2s ease-out;
+
+	  img {
+	  	width: 30px;
+	  	height: 30px;
+	  	margin: 0 10px;
+	  	opacity: 1;
+	  }
+
+	  &:hover {
+	  	opacity: 0.75;
+	  }
+  }
+
+  p {
+  	margin: 10px 10px 0;
+  	font-size: 13px;
+  }
+}
+
