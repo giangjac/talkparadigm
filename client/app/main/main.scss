@@ -35,16 +35,16 @@
     .content {
       text-align: left;
       width: 280px;
-      margin: 90px -140px 0;
+      
       position: absolute;
       display: inline-block;
       @media (min-width: 400px) and (max-width: 900px) {
         width: 245px;
-        margin: 80px -115px 0;
+        
       }
       @media (max-width: 400px) {
         width: 200px;
-        margin: 70px -100px 0;
+        
       }
 
       p {
