@@ -80,4 +80,10 @@ div.rn-carousel-indicator span {
     font-size: 50px;
     top: 300px;
   }
+  .rn-carousel-control.rn-carousel-control-prev {
+    left: 0; 
+  }
+  .rn-carousel-control.rn-carousel-control-next {
+    right: 0;
+  }
 }
