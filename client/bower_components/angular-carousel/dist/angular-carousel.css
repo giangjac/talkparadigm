@@ -50,11 +50,11 @@ div.rn-carousel-indicator span {
   font-family: monospace;
   color: #000;
   position: absolute;
-  top: 280px;
-  opacity: 1;
+  top: 37vh;
+  opacity: 0.45;
   cursor: pointer; }
   .rn-carousel-control:hover {
-    opacity: 0.75; }
+    opacity: 1; }
   .rn-carousel-control.rn-carousel-control-prev {
     left: 0.5em; }
     .rn-carousel-control.rn-carousel-control-prev:before {
@@ -81,9 +81,9 @@ div.rn-carousel-indicator span {
     top: 270px;
   }
   .rn-carousel-control.rn-carousel-control-prev {
-    left: 0; 
+    left: 17px;
   }
   .rn-carousel-control.rn-carousel-control-next {
-    right: 0;
+    right: 16px;
   }
 }
