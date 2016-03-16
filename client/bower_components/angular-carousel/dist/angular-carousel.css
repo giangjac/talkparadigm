@@ -78,7 +78,7 @@ div.rn-carousel-indicator span {
 @media (max-width: 400px) {
   .rn-carousel-control {
     font-size: 50px;
-    top: 300px;
+    top: 280px;
   }
   .rn-carousel-control.rn-carousel-control-prev {
     left: 0; 
