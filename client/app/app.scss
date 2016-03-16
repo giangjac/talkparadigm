@@ -21,6 +21,14 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 
 .main-container {
 	min-height: 620px;
+
+	@media (max-width: 900px) {
+		overflow-x: hidden;
+	}
+
+	@media (max-width: 400px) {
+		min-height: 480px;
+	}
 }
 
 // Component styles are injected through grunt
@@ -28,7 +36,7 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 @import 'admin/admin';
 @import 'main/main';
 @import '../components/footer/footer';
-@import '../components/navbar/navbar';
 @import '../components/modal/modal';
+@import '../components/navbar/navbar';
 @import '../components/oauth-buttons/oauth-buttons';
 // endinjector

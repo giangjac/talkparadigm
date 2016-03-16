@@ -38,17 +38,24 @@
       margin: 90px -140px 0;
       position: absolute;
       display: inline-block;
-      @media (max-width: 900px) {
+      @media (min-width: 400px) and (max-width: 900px) {
         width: 245px;
         margin: 80px -115px 0;
+      }
+      @media (max-width: 400px) {
+        width: 200px;
+        margin: 70px -100px 0;
       }
 
       p {
         font-size: 34px;
         line-height: 1.25em;
         font-weight: bold;
-        @media (max-width: 900px) {
+        @media (min-width: 400px) and (max-width: 900px) {
           font-size: 28px;
+        }
+        @media (max-width: 400px) {
+          font-size: 24px;
         }
       }
     }
@@ -56,8 +63,11 @@
     .layer {
       .image {
         box-shadow: 6px 6px 10px #000;
-        @media (max-width: 900px) {
+        @media (min-width: 400px) and (max-width: 900px) {
           width: 350px;
+        }
+        @media (max-width: 400px) {
+          width: 280px;
         }
       }
     }
