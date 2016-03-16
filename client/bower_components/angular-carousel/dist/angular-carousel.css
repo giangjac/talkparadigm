@@ -63,8 +63,21 @@ div.rn-carousel-indicator span {
     right: 0.5em; }
     .rn-carousel-control.rn-carousel-control-next:before {
       content: "\203A"; }
-@media (max-width: 900px) {
+@media (min-width: 400px) and (max-width: 900px) {
   .rn-carousel-control {
-    display: none;
+    font-size: 100px;
+    top: 320px;
+  }
+  .rn-carousel-control.rn-carousel-control-prev {
+    left: 0; 
+  }
+  .rn-carousel-control.rn-carousel-control-next {
+    right: 0;
+  }
+}
+@media (max-width: 400px) {
+  .rn-carousel-control {
+    font-size: 50px;
+    top: 300px;
   }
 }
