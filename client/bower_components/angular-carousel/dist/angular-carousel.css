@@ -63,6 +63,11 @@ div.rn-carousel-indicator span {
     right: 0.5em; }
     .rn-carousel-control.rn-carousel-control-next:before {
       content: "\203A"; }
+@media (min-width: 900px) and (max-width: 1920px) {
+  .rn-carousel-control {
+    top: 28vh;
+  }
+}
 @media (min-width: 400px) and (max-width: 900px) {
   .rn-carousel-control {
     font-size: 100px;
