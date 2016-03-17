@@ -25,7 +25,11 @@ $fa-font-path: "../bower_components/font-awesome/fonts";
 	overflow-x: hidden;
 	height: 100vh;
 
-	@media (max-width: 900px) {
+	@media (min-width: 900px) and (max-width: 1920px) {
+		padding-top: 8vh;
+	}
+
+	@media (min-width: 400px) and (max-width: 900px) {
 		padding-top: 116px;
 		height: 840px;
 	}
