@@ -26,6 +26,35 @@ var server = http.createServer(app);
 require('./config/express')(app);
 require('./routes')(app);
 
+// Processes the form submission.
+app.post('/send', function (req, res) {
+  // Here is an example of how we could send the form data by email.
+  var Email = require('emailjs/email');
+  var server = Email.server.connect({
+    user: 'talkparadigm@gmail.com',
+    password: 'Ham&cheese7',
+    host: 'smtp.gmail.com',
+    ssl: true,
+    port: 465
+  });
+  server.send({
+    'text': req.body.comments.$viewValue,
+    'from': 'Talk Paradigm <talkparadigm@gmail.com>',
+    'to': 'Talk Paradigm <talkparadigm@gmail.com>',
+    'reply-to': req.body.email.$viewValue,
+    'subject': req.body.name.$viewValue + ' Submitted Their Card!'
+  }, function (err, message) {
+    console.log(err || message);
+  });
+
+  // For this example, we just log the form data and return OK.
+  // console.log(req.body.name.$viewValue);
+  // This is a dummy loop to simulate a slow connection.
+  //for (var i = 0; i < 99999999; i++) { }
+  // Return a successful response.
+  return res.send({status: 'OK'});
+});
+
 // Start server
 function startServer() {
   app.angularFullstack = server.listen(config.port, config.ip, function() {
@@ -37,3 +66,4 @@ setImmediate(startServer);
 
 // Expose app
 exports = module.exports = app;
+

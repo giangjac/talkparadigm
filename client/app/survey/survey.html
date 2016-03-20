@@ -1,0 +1,73 @@
+<div class="container">
+	<div data-ng-controller="cardSubmit">
+		<div id="messages" class="alert alert-success" data-ng-show="messages" data-ng-bind="messages"></div>
+	  <form name="cardForm" novalidate role="form">
+			<ul class="carousel image" rn-carousel rn-carousel-controls rn-carousel-duration=800 rn-carousel-transition="custom" rn-swipe-disabled="true">
+		    <li>
+		      <div class="content">
+		      	<div class="form-group">
+		      		<label for='name'>Enter your secret PIN to proceed... </label>
+		      		<span class='label label-danger' data-ng-show='submitted && cardForm.name.$error.required'>Required!</span>
+		      		<input id="nameInput" ng-keydown="$event.keyCode === 13 && checkName($event) && nextSlide()" type='text' name='name' placeholder="Enter PIN" data-ng-model='user.name' ng-model-options="{ getterSetter: true }" class='form-control name-validator' autocomplete="off" onkeypress='return event.charCode >= 48 && event.charCode <= 57' required />
+		      	</div>
+		      </div>
+		      <div class="layer"><img class="image" src='/assets/cards/card_front.png'></div>
+		    </li>
+		    <li>
+		      <div class="content"><p>Hello, <span ng-bind="user.name()"></span>. Thank you for making this possible! Please proceed to the next card.</p></div>
+		      <div class="layer"><img class="image" src='/assets/cards/card_back.png'></div>
+		    </li>
+		    <li>
+		      <div class="content">
+		      	<div class="form-group comments">
+			      	<label for="comments">Please share your experience in the text box below...</label>
+				      <span class="label label-danger" data-ng-show="submitted && cardForm.comments.$error.required">Required!</span>
+				      <textarea name="comments" data-ng-model="comments" class="form-control" placeholder="Begin typing here..."required></textarea>
+		      	</div>
+		      </div>
+		      <div class="layer"><img class="image" src='/assets/cards/card_back.png'></div>
+		    </li>
+		    <li>
+		      <div class="content">
+		      	<div class="form-group">
+			      	<label for="email">Enter your e-mail address</label>
+				      <span class="label label-danger" data-ng-show="submitted && cardForm.email.$error.required">Required!</span>
+				      <span class="label label-danger" data-ng-show="submitted && cardForm.$error.email">Invalid email!</span>
+				      <input type="email" placeholder="example@test.com" name="email" data-ng-model="email" class="form-control email" autocomplete="off" required />
+				      <button data-ng-disabled="progress.active()" data-ng-click="submit(cardForm)" class="btn btn-default">Submit</button>
+		      	</div>
+		      </div>
+		      <div class="layer"><img class="image" src='/assets/cards/card_back.png'></div>
+		    </li>
+		  </ul>
+	  </form>
+	  <div class="disabler">
+	  	
+	  </div>
+	</div>
+</div>
+
+<script>
+	window.onload = function() {
+	 var nameInput = document.getElementById('nameInput');
+	 nameInput.onpaste = function(e) {
+	   e.preventDefault();
+	 }
+	}
+
+	$(document).ready(function() {
+		var letters = /^[A-Za-z]+$/;
+		$('#nameInput').on('keyup', function() {
+			if ($(this)[0].value.match(letters)) {
+				$('#nameInput').css({
+					'borderColor': '#6ea562',
+					'color' : '#6ea562'});
+				$('.disabler').hide();
+			} else {
+				$('#nameInput').css({
+					'borderColor': 'red',
+					'color' : '#000'});
+			}
+		});
+	});
+</script>
