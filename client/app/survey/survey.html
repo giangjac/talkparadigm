@@ -14,7 +14,7 @@
 		      <div class="layer"><img class="image" src='/assets/cards/card_front.png'></div>
 		    </li>
 		    <li>
-		      <div class="content"><p>Hello, <span ng-bind="user.name()"></span>. Thank you for making this possible! Please proceed to the next card.</p></div>
+		      <div class="content"><p>Hello, <span ng-bind="user.name()"></span>. Thank you for making this possible! <br><br> Please proceed to the next card.</p></div>
 		      <div class="layer"><img class="image" src='/assets/cards/card_back.png'></div>
 		    </li>
 		    <li>
@@ -29,8 +29,8 @@
 		    </li>
 		    <li>
 		      <div class="content">
-		      	<div class="form-group">
-			      	<label for="email">Enter your e-mail address</label>
+		      	<div class="form-group email-form">
+			      	<label for="email">And lastly, please enter your e-mail address...</label>
 				      <span class="label label-danger" data-ng-show="submitted && cardForm.email.$error.required">Required!</span>
 				      <span class="label label-danger" data-ng-show="submitted && cardForm.$error.email">Invalid email!</span>
 				      <input type="email" placeholder="example@test.com" name="email" data-ng-model="email" class="form-control email" autocomplete="off" required />
@@ -57,16 +57,20 @@
 
 	$(document).ready(function() {
 		var letters = /^[A-Za-z]+$/;
+		$('survey .container').hide();
+		$('survey .container').delay(500).fadeIn();
 		$('#nameInput').on('keyup', function() {
 			if ($(this)[0].value.match(letters)) {
 				$('#nameInput').css({
 					'borderColor': '#6ea562',
 					'color' : '#6ea562'});
 				$('.disabler').hide();
+				$('#nameInput').attr('disabled', true);
 			} else {
 				$('#nameInput').css({
 					'borderColor': 'red',
 					'color' : '#000'});
+				$('.disabler').show();
 			}
 		});
 	});

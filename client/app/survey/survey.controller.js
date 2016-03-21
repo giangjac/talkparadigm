@@ -80,6 +80,7 @@
               $scope.cardForm.comments = null;
               $scope.messages = 'Your form has been sent!';
               $scope.cardForm.submitted = false;
+              $location.path('/thanks');
             } else {
               $scope.messages = 'Oops, we received your request, but there was an error processing it.';
               $log.error(data);
