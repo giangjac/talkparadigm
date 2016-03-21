@@ -28,7 +28,7 @@
         } else {
           return false;
         }
-      }
+      };
 
       var _name = '';
       $scope.user = {
@@ -65,36 +65,29 @@
           return;
         }
 
-        // Default values for the request.
-        var config = {
-          params:
-            {
-              'callback' : 'JSON_CALLBACK',
-              'name' : $scope.cardForm.name,
-              'email' : $scope.cardForm.email,
-              'comments' : $scope.cardForm.comments
-            }
+        var res = {
+          'name' : $scope.cardForm.name,
+          'email' : $scope.cardForm.email,
+          'comments' : $scope.cardForm.comments
         };
 
         // Perform JSONP request.
-        var $promise = $http.jsonp('response.json', config)
+        $http.post('/send', res)
           .success(function(data, status, headers, config) {
             if (data.status == 'OK') {
-              $scope.name = null;
-              $scope.email = null;
-              $scope.comments = null;;
+              $scope.cardForm.name = null;
+              $scope.cardForm.email = null;
+              $scope.cardForm.comments = null;
               $scope.messages = 'Your form has been sent!';
-              $scope.submitted = false;
-              $location.path('/');
+              $scope.cardForm.submitted = false;
             } else {
               $scope.messages = 'Oops, we received your request, but there was an error processing it.';
               $log.error(data);
             }
           })
           .error(function(data, status, headers, config) {
-            //$scope.progress = data;
             $scope.messages = 'There was a network error. Try again later.';
-            //$log.error(data);
+            $log.error(data);
           })
           .finally(function() {
             // Hide status messages after three seconds.
