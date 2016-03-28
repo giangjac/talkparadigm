@@ -17,28 +17,24 @@
           content: "When somebody asks me where I'm from, I feel like I'll never belong."
         },
         {
-          image: "/assets/cards/card_front.png",
-          content: ""
-        },
-        {
           image: "/assets/cards/card_back.png",
           content: "Marriage doesn't have to mean sacrificing your last name."
-        },
-        {
-          image: "/assets/cards/card_front.png",
-          content: ""
         },
         {
           image: "/assets/cards/card_back.png",
           content: "When somebody catcalls me, it makes me feel like I don't have ownership of my own body."
         },
         {
-          image: "/assets/cards/card_front.png",
-          content: ""
+          image: "/assets/cards/card_back.png",
+          content: "Somebody at a party makes a racist remark. What do you do?"
         },
         {
           image: "/assets/cards/card_back.png",
-          content: "Somebody at a party makes a racist remark. What do you do?"
+          content: "I've been in school for four years and my dad has never asked me what I'm studying. I see him everyday."
+        },
+        {
+          image: "/assets/cards/card_back.png",
+          content: "Did you attend a public or private school?"
         }
       ];
     }

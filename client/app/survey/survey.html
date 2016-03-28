@@ -22,7 +22,7 @@
 		      	<div class="form-group comments">
 			      	<label for="comments">Please share your experience in the text box below...</label>
 				      <span class="label label-danger" data-ng-show="submitted && cardForm.comments.$error.required">Required!</span>
-				      <textarea name="comments" data-ng-model="comments" class="form-control" placeholder="Begin typing here..."required></textarea>
+				      <textarea name="comments" data-ng-model="comments" class="form-control" placeholder="ie. When someone says ____________, it makes me feel ____________."required></textarea>
 		      	</div>
 		      </div>
 		      <div class="layer"><img class="image" src='/assets/cards/card_back.png'></div>
@@ -65,7 +65,7 @@
 					'borderColor': '#6ea562',
 					'color' : '#6ea562'});
 				$('.disabler').hide();
-				$('#nameInput').attr('disabled', true);
+				//$('#nameInput').attr('disabled', true);
 			} else {
 				$('#nameInput').css({
 					'borderColor': 'red',

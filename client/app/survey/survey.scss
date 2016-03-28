@@ -20,6 +20,12 @@
     @media (max-width: 400px) {
     	margin-top: 0px;
     }
+
+    .email {
+        @media (max-width: 400px) {
+            margin-left: 6px;
+        }
+    }
 }
 
 .form-control {
@@ -122,7 +128,7 @@ textarea.form-control {
     }
 
     @media (min-width: 400px) and (max-width: 900px) {
-	    margin-left: 10%;
+        margin-left: 25px;
     }
 
     @media (max-width: 400px) {
