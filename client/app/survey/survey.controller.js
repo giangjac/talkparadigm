@@ -71,6 +71,42 @@
           return true;
         } else if (event.target.value === 'Max') {
           return true;
+        } else if (event.target.value === 'Esther') {
+          return true;
+        } else if (event.target.value === 'Amanda') {
+          return true;
+        } else if (event.target.value === 'Courtney') {
+          return true;
+        } else if (event.target.value === 'Jaimie') {
+          return true;
+        } else if (event.target.value === 'Mark') {
+          return true;
+        } else if (event.target.value === 'Max') {
+          return true;
+        } else if (event.target.value === 'Rebecca') {
+          return true;
+        } else if (event.target.value === 'Todd') {
+          return true;
+        } else if (event.target.value === 'Adrian') {
+          return true;
+        } else if (event.target.value === 'Charlie') {
+          return true;
+        } else if (event.target.value === 'Cathlin') {
+          return true;
+        } else if (event.target.value === 'Sean') {
+          return true;
+        } else if (event.target.value === 'Bethany') {
+          return true;
+        } else if (event.target.value === 'Anna') {
+          return true;
+        } else if (event.target.value === 'Dae') {
+          return true;
+        } else if (event.target.value === 'Lauren') {
+          return true;
+        } else if (event.target.value === 'Michelle') {
+          return true;
+        } else if (event.target.value === 'Tim') {
+          return true;
         } else {
           return false;
         }
@@ -139,6 +175,42 @@
             return arguments.length ? (_name = 'Kevin') : _name;
           } else if (newName === '673902') {
             return arguments.length ? (_name = 'Max') : _name;
+          } else if (newName === '283881') {
+            return arguments.length ? (_name = 'Esther') : _name;
+          } else if (newName === '204993') {
+            return arguments.length ? (_name = 'Amanda') : _name;
+          } else if (newName === '004281') {
+            return arguments.length ? (_name = 'Delphia') : _name;
+          } else if (newName === '448851') {
+            return arguments.length ? (_name = 'Courtney') : _name;
+          } else if (newName === '401126') {
+            return arguments.length ? (_name = 'Jaimie') : _name;
+          } else if (newName === '478771') {
+            return arguments.length ? (_name = 'Mark') : _name;
+          } else if (newName === '819015') {
+            return arguments.length ? (_name = 'Max') : _name;
+          } else if (newName === '356552') {
+            return arguments.length ? (_name = 'Adrian') : _name;
+          } else if (newName === '334351') {
+            return arguments.length ? (_name = 'Todd') : _name;
+          } else if (newName === '322941') {
+            return arguments.length ? (_name = 'Charlie') : _name;
+          } else if (newName === '310578') {
+            return arguments.length ? (_name = 'Cathlin') : _name;
+          } else if (newName === '291006') {
+            return arguments.length ? (_name = 'Sean') : _name;
+          } else if (newName === '222310') {
+            return arguments.length ? (_name = 'Bethany') : _name;
+          } else if (newName === '214919') {
+            return arguments.length ? (_name = 'Anna') : _name;
+          } else if (newName === '202039') {
+            return arguments.length ? (_name = 'Dae') : _name;
+          } else if (newName === '101059') {
+            return arguments.length ? (_name = 'Lauren') : _name;
+          } else if (newName === '378928') {
+            return arguments.length ? (_name = 'Michelle') : _name;
+          } else if (newName === '556484') {
+            return arguments.length ? (_name = 'Tim') : _name;
           } else {
             return arguments.length ? (_name = newName) : _name;
           }
